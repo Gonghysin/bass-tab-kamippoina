@@ -2,6 +2,11 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<script>
+  // Count /index.html and the directory URL as one page: busuanzi keys page_pv by the page URL
+  if (/\/index\.html$/.test(location.pathname))
+    history.replaceState(null, "", location.pathname.replace(/index\.html$/, "") + location.search + location.hash);
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>神っぽいな Bass Tab</title>
 <meta name="description" content="神っぽいな (Raise A Suilen) 贝斯谱，在线查看与 PDF 下载">
